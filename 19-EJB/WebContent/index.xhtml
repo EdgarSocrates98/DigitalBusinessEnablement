@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+</h:head> 
+<body> 
+	<h1>Cálculo de área do triangulo</h1>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Base" />
+			<h:inputText value="#{indexBean.base}" />
+			
+			<h:outputLabel value="Altura" />
+			<h:inputText value="#{indexBean.altura}" />
+			
+			<h:commandButton action="#{indexBean.calcular()}" 
+												value="Calcular" />
+		</h:panelGrid>		
+	</h:form>
+		<h:outputText value="#{indexBean.area}" />
+		
+	<h2>Carrinho de Compras - BitCoin</h2>
+	<h:form>
+		<h:panelGrid columns="3">
+			<h:inputText value="#{indexBean.valor}" />
+			<h:commandButton action="#{indexBean.adicionar()}" 
+				value="Adicionar" />
+			<h:outputText value="#{indexBean.total}" />
+		</h:panelGrid>
+	</h:form>
+	<h2>Enquete, em quem você vota?</h2>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:commandButton action="#{indexBean.votarDoria()}" value="Dória" />			
+			<h:commandButton action="#{indexBean.votarBolsonaro()}" value="Bolsonaro" />
+			<h:outputText value="#{indexBean.doria}" />
+			<h:outputText value="#{indexBean.bolsonaro}" />
+		</h:panelGrid>
+	</h:form>
+		
+</body> 
+</html>
+
+
+
+
+
